@@ -20,7 +20,7 @@ async function ProductosPage({ searchParams }) {
                 API REST
             </h1>
 
-            <Suspense fallback={<Fallback>Nuevo producto ... </Fallback>}>
+            <Suspense fallback={<Fallback>Nuevo cliente ... </Fallback>}>
                 <ProductoNuevo />
             </Suspense>
 
