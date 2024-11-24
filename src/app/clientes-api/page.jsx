@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Fallback from "@/components/fallback";
-import Productos from "@/components/api-productos";
-import ProductoNuevo from "@/components/api-producto-nuevo";
+import Clientes from "@/components/api-clientes";
+import ClienteNuevo from "@/components/api-cliente-nuevo";
 import { Suspense } from "react";
 
 
 
-async function ProductosPage({ searchParams }) {
+async function clientesPage({ searchParams }) {
     const { query } = await searchParams;
 
     // Introducimos un retardo artificial
@@ -17,18 +17,18 @@ async function ProductosPage({ searchParams }) {
             <Link href="/" className="fixed text-4xl p-2 bg-orange-300 rounded-full">🏠</Link>
 
             <h1 className='py-10 text-3xl text-blue-500 text-center border-b-4 border-b-blue-500'>
-                API REST
+                API REST clientes
             </h1>
 
             <Suspense fallback={<Fallback>Nuevo cliente ... </Fallback>}>
-                <ProductoNuevo />
+                <ClienteNuevo />
             </Suspense>
 
             <Suspense fallback={<Fallback>Obteniendo datos ... </Fallback>}>
-                <Productos query={query || ''} />
+                <Clientes query={query || ''} />
             </Suspense>
         </section>
     );
 }
 
-export default ProductosPage;
+export default clientesPage;
