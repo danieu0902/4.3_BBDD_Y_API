@@ -38,11 +38,10 @@
       "createdAt": "2024-11-24T01:24:35.812Z"
     },
     {
-      "id": "afed",
-      "nombre": "Daniel Euripides",
-      "descripcion": "calle aaaaa 33",
-      "precio": null,
-      "createdAt": "2024-11-24T01:35:09.730Z"
+      "id": "f884",
+      "nombre": "rolu",
+      "domicilio": "calle adrian 40",
+      "fecha_nacimiento": "1122-11-23"
     }
   ]
 }

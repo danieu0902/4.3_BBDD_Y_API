@@ -3,11 +3,11 @@ import { revalidatePath } from "next/cache";
 
 async function nuevoCliente(formData) {
     'use server'
-    const [nombre, descripcion, precio] = formData.values()
+    const [nombre, domicilio, fecha_nacimiento] = formData.values()
 
     const response = await fetch('http://localhost:4000/clientes', {
         method: 'POST',
-        body: JSON.stringify({ nombre, descripcion, precio: +precio, createdAt: new Date().toISOString() })
+        body: JSON.stringify({ nombre, domicilio, fecha_nacimiento })
     })
     const data = await response.json()
 
